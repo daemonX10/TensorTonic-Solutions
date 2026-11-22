@@ -5,8 +5,7 @@ def manhattan_distance(x: list, y: list) -> float:
     Returns the Manhattan distance as a Python float.
     """
     # Write code here
-    ans = 0
-    n = len(x)
-    for i in range(n):
-        ans+=abs(x[i]-y[i])
-    return float(ans)
+    x = np.array(x,dtype=float)
+    y = np.array(y,dtype = float)
+    ans = np.sum(np.abs(x-y),dtype=float)
+    return ans
